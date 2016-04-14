@@ -62,7 +62,7 @@ class Barcode
      * @param string $filename
      * @param bool|false $download
      */
-    public function save($filename = "", $download = false)
+    public function save($filename = "", $download = true)
     {
         // generate encodeText
         if (in_array($this->type, ['code128', 'code128a'])) {
