@@ -59,10 +59,10 @@ class Barcode
 
     /**
      * Save a barcode as image
-     * @param $filename
+     * @param string $filename
      * @param bool|false $download
      */
-    public function save($filename, $download = false)
+    public function save($filename = "", $download = false)
     {
         // generate encodeText
         if (in_array($this->type, ['code128', 'code128a'])) {
@@ -118,13 +118,15 @@ class Barcode
 
     private function saveImage($filename, $download)
     {
-        if (strtolower(substr($filename, -4)) !== ".png") {
-            $filename .= ".png";
-        }
 
         if ($download) {
-            header("Content-Description: File Transfer");
-            header('Content-Disposition: attachment; filename="' . $filename . '"');
+            if ($filename !== "") {
+                if (strtolower(substr($filename, -4)) !== ".png") {
+                    $filename .= ".png";
+                }
+                header("Content-Description: File Transfer");
+                header('Content-Disposition: attachment; filename="' . $filename . '"');
+            }
             header('Content-Type: image/png');
             header('Content-Transfer-Encoding: binary');
             header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
