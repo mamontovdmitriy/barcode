@@ -1,13 +1,13 @@
 {
-    "name": "mamontovdmitriy/yii2-barcode",
-    "description": "A barcode generator for the Yii framework",
-    "type": "yii2-extension",
-    "keywords": ["yii2","extension"," barcode"],
-    "homepage":"https://github.com/mamontovdmitriy/yii2-barcode.git",
+    "name": "mamontovdmitriy/barcode",
+    "description": "A barcode generator",
+    "type": "library",
+    "keywords": [" barcode","generator","code128","code128a"],
+    "homepage":"https://github.com/mamontovdmitriy/barcode.git",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/mamontovdmitriy/yii2-barcode/issues",
-        "source": "https://github.com/mamontovdmitriy/yii2-barcode"
+        "issues": "https://github.com/mamontovdmitriy/barcode/issues",
+        "source": "https://github.com/mamontovdmitriy/barcode"
     },
     "authors": [
         {
